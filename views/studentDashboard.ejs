@@ -1,0 +1,130 @@
+<%if(locals.user) {%> <%- include("./partials/_navbar") -%>
+
+<div class="card w-50 m-auto border border-info">
+  <div class="card-body">
+    <h5 class="card-title text-center">Add Students</h5>
+
+    <form method="post" action="/student/add" class="card-text">
+      <!-- name -->
+      <div class="form-outline mb-2">
+        <input
+          type="text"
+          id="form3Example1"
+          name="name"
+          class="form-control"
+        />
+        <label class="form-label" for="form3Example1">Name</label>
+      </div>
+      <!-- Email input -->
+      <div class="form-outline mb-2">
+        <input
+          type="email"
+          name="email"
+          id="form3Example2"
+          class="form-control"
+        />
+        <label class="form-label" for="form3Example2">Email </label>
+      </div>
+      <!-- phone -->
+      <div class="form-outline mb-2">
+        <input
+          type="number"
+          name="phone"
+          id="form3Example3"
+          class="form-control"
+        />
+        <label class="form-label" for="form3Example3">Phone</label>
+      </div>
+      <!-- college -->
+      <div class="form-outline mb-2">
+        <input
+          type="text"
+          name="college"
+          id="form3Example4"
+          class="form-control"
+        />
+        <label class="form-label" for="form3Example4">College</label>
+      </div>
+      <!-- placement and batch  -->
+      <div class="row mb-4 mb-2">
+        <div class="col">
+          <div class="form-outline">
+            <input
+              type="text"
+              name="batch"
+              id="form3Example5"
+              class="form-control"
+            />
+            <label class="form-label" for="form3Example5">Batch</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <select
+              class="border border-info form-control"
+              name="placement"
+              id="form3Example6"
+            >
+              <option value="Not Placed">Not Placed</option>
+              <option value="Placed">Placed</option>
+            </select>
+            <!-- <label class="form-label" for="form3Example6">placement</label> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- scores -->
+      <div class="row mb-4">
+        <div class="col">
+          <div class="form-outline">
+            <input
+              type="number"
+              name="dsa"
+              id="form3Example7"
+              class="form-control"
+            />
+            <label class="form-label" for="form3Example7">DSA</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <input
+              type="number"
+              name="webd"
+              id="form3Example8"
+              class="form-control"
+            />
+            <label class="form-label" for="form3Example8">Development</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-outline">
+            <input
+              type="number"
+              name="react"
+              id="form3Example9"
+              class="form-control"
+            />
+            <label class="form-label" for="form3Example9">React</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary btn-block mb-4">
+        Add student
+      </button>
+    </form>
+  </div>
+</div>
+
+<!--       -------------------------------------- STUDENT TABLE ------------------------------------ -->
+
+<div class="mt-4 m-auto p-4">
+  <% if(students&&students.length !==0){ %>
+  <h2>Student Details</h2>
+  <%-include("./partials/_studentTable.ejs") -%> <%}else{%>
+  <h2>No students to display</h2>
+  <%}%>
+</div>
+<%}%>
