@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: linear-gradient(90deg, rgba(45, 40, 40, 0.6), rgba(212, 235, 237, 0.1)), url('/images/employee.jpg');
+    overflow: hidden;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    overflow:hidden;
+}
+
+h1 {
+    color: white;
+    font-size: 56px;
+    line-height: 60px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-top: 100px;
+    padding-left: 30px;
+}
+
+.container #btn {
+    width: 150px;
+    height: 45px;
+    background-color: beige;
+    color: blue;
+    font-size: 16px;
+    border-color: blue;
+    cursor: pointer;
+}
+
+.container #btn:hover {
+    background-color: transparent;
+    color: white;
+}
+
+@media (max-width:600px) {
+    h1 {
+        color: white;
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    .container {
+        width: 90%;
+    }
+}

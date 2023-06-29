@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('/images/office.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    display: flex;
+}
+
+@media (max-width:600px) {
+    .wrapper {
+        flex-direction: column;
+    }
+}
+
+.container {
+    width: 50%;
+    background-color: rgba(105, 171, 171, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    color: white;
+    font-size: 16px;
+    height: 340px;
+}
+
+@media (max-width:600px) {
+    .container {
+        width: 100%;
+        background-color: rgba(105, 171, 171, 0.8);
+        color: rgb(0, 0, 0);
+        font-size:16px;
+        
+        
+    }
+}
+
+.container #logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.container table {
+    width: 100%;
+    border-spacing: 20px 20px;
+}
+
+.container #cname {
+    width: 250px;
+    height: 28px;
+    border-radius: 10px;
+}
+
+.container #date {
+    height: 30px;
+    width: 150px;
+}
+
+.container #submit {
+    width: 150px;
+    height: 35px;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 170px;
+    color: white;
+    border-color: white;
+}
+
+.container #submit:hover {
+    background-color: aqua;
+    color: black
+}
+
+@media (max-width:600px) {
+    .container #submit {
+        width: 100px;
+        color: black;
+    }
+}
+
+.container #st_id {
+    width: 250px;
+    height: 28px;
+    border-radius: 10px;
+}
+
+/* list of Inteview */
+#interview-list {
+    text-align: left;
+    background-color: rgba(0, 255, 255, 0.5);
+    margin-top: 80px;
+    width: 50%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+@media (max-width:600px) {
+    #interview-list {
+        width: 100%;
+        overflow-x: auto;
+        margin-bottom: 40px;
+    }
+}
+
+#interview-list #interview {
+    border-spacing: 0px 0px;
+}
+
+#interview {
+    width: 100%;
+    margin-left: 10px;
+}
+
+#interview .row {
+    background-color: antiquewhite;
+    height: 40px;
+}
+
+#interview #header {
+    background-color: white;
+    height: 50px;
+}
+
+#interview caption {
+    margin-top: 20px;
+    font-size: 20px;
+    color: rgb(32, 10, 177);
+    font-weight: 600;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    height: 40px;
+    line-height: 40px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+#interview .result {
+    height: 30px;
+}
+
+#interview tr td:first-child {
+    padding-left: 5px;
+}
+
+#int-btn {
+    position: absolute;
+    bottom: 40px;
+    right: 30px;
+    height: 40px;
+    width: 200px;
+    font-size: 18px;
+    background-color: rgb(49, 226, 232);
+    color: rgb(14, 8, 8);
+    cursor: pointer;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+#int-btn:hover {
+    background-color: rgb(24, 139, 177);
+    color: white;
+}
+
+#exp-btn {
+    position: absolute;
+    bottom: 40px;
+    right: 400px;
+    height: 40px;
+    width: 200px;
+    font-size: 18px;
+    background-color: rgb(49, 226, 232);
+    color: rgb(14, 8, 8);
+    cursor: pointer;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+#exp-btn:hover {
+    background-color: rgb(24, 139, 177);
+    color: white;
+}
+
+@media (max-width:600px) {
+    #int-btn {
+        width: 180px;
+        font-size: 16px;
+    }
+
+    #exp-btn {
+        right: 250px;
+    }
+}
+
+.del-btn {
+    width: 70px;
+    height: 35px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(158, 232, 208);
+}
+
+.del-btn:hover {
+    background-color: aqua;
+}

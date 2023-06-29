@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <form method="post" action="/createSession">
+                <table>
+                    <tr id="logo-row">
+                        <td><img src="/images/logo.jpeg">&nbsp; <p>Employee Login Portal</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-feild"><label>Email:&nbsp;</label><input type="text" name="email" id="email"
+                                class="text-feild" required></td>
+                    </tr>
+                    <tr>
+                        <td class="text-feild"><label>Password:&nbsp;</label><input type="password" name="password"
+                                id="password" class="text-feild" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" id="submit"><input type="submit" value="Sign-in"></td>
+                    </tr>
+                    <tr id="for-change-pass">
+                        <td colspan="2" class="center">
+                            <a href="/change-password">&nbsp;Change password</a>
+                        </td>
+                    </tr>
+                    <tr id="register">
+                        <td colospan="2"><a href="/register">
+                                <div id="reg-btn">Register As Employee</div>
+                            </a></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <script>
+        < %
+        if (flash.succes) {
+            % >
+            new Noty({
+                theme: 'relax',
+                text: '<%= flash.success%>',
+                type: 'success',
+                layout: 'topRight',
+                timeout: 1500
+            }).show(); <
+            %
+        } % >
+    </script>
+</body>
+
+</html>

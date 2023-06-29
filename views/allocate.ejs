@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/interview.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div id="logo"><img src="/images/logo.jpeg"></div>
+            <form method="post" action="/addInterview">
+                <table id="interview-form">
+                    <tr>
+                        <td>Company Name:</td>
+                        <td><input type="text" id="cname" name="cname"></td>
+                    </tr>
+                    <tr>
+                        <td>Interview Date:</td>
+                        <td><input type="date" id="date" name="date"></td>
+                    </tr>
+                    <% if(locals.student_id){ %>
+                    <tr>
+                        <td>Student_id:</td>
+                        <td><input type="text" value="<%= student_id %>" name="stId" id="st_id" readonly>
+                        </td>
+                    </tr>
+                    <% } %>
+
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="submit" id="submit">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div id="interview-list">
+            <table id="interview">
+                <caption>Inteview List</caption>
+                <tr id="header">
+                    <td>Company_Name</td>
+                    <td>Student_Name</td>
+                    <td>Interview_Date</td>
+                    <td>Result</td>
+                    <td>Remove</td>
+                </tr>
+                <% if(interviews){ %>
+
+                <% } %>
+                <% for(let interview of interviews){ %>
+                <tr class="row">
+                    <td><%= interview.company_name %></td>
+                    <td><%= interview.student_id.student_name  %></td>
+                    <td><%= interview.date %></td>
+                    <% if(interview.result=='Pass'){ %>
+                    <td>
+                        <select class="result" name="result" id="<%= interview.id %>">
+                            <option>Hold</option>
+                            <option selected>Pass</option>
+                            <option>Fail</option>
+                            <option>Didn't Attempt</option>
+                        </select>
+                    </td>
+                    <% }else if(interview.result=='Fail'){ %>
+                    <td>
+                        <select class="result" name="result" id="<%= interview.id %>">
+                            <option>Hold</option>
+                            <option>Pass</option>
+                            <option selected>Fail</option>
+                            <option>Didn't Attempt</option>
+                        </select>
+                    </td>
+                    <% }else if(interview.result=='Hold'){ %>
+                    <td>
+                        <select class="result" name="result" id="<%= interview.id %>">
+                            <option selected>Hold</option>
+                            <option>Pass</option>
+                            <option>Fail</option>
+                            <option>Didn't Attempt</option>
+                        </select>
+                    </td>
+                    <% }else if(interview.result==`Didn't Attempt`){ %>
+                    <td>
+                        <select class="result" name="result" id="<%= interview.id %>">
+                            <option>Hold</option>
+                            <option>Pass</option>
+                            <option>Fail</option>
+                            <option selected>Didn't Attempt</option>
+                        </select>
+                    </td>
+                    <% } %>
+                    <td>
+                        <a href="/deleteInterview/<%= interview.id %>"><button class="del-btn">Remove</button></a>
+                    </td>
+                </tr>
+                <% } %>
+            </table>
+        </div>
+        <a href="/students"><button id="int-btn">Go to Students List</button></a>
+        <a href="/export"><button id="exp-btn">Download Details</button></a>
+
+    </div>
+    <script src="/js/interview.js"></script>
+</body>
+
+</html>

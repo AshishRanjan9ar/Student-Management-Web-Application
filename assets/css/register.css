@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('/images/employee.jpg');
+    overflow: hidden;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    height: 300px;
+}
+
+.wrapper .container {
+    width: 350px;
+    background-color: rgb(235, 241, 221);
+    border-radius: 30px;
+    padding-bottom: 20px;
+}
+
+#logo-row td {
+    text-align: center;
+}
+
+.container #logo-row img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+table #sub {
+    text-align: center;
+}
+
+table #sub input {
+    width: 150px;
+    height: 40px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+table {
+    border-spacing: 0 15px;
+}
+
+form .text-feild {
+    height: 25px;
+    border-radius: 10px;
+}
+
+form input:focus {
+    background-color: rgb(254, 251, 238);
+}
+
+#sub #submit {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#sub #submit:hover {
+    color: white;
+    background-color: rgb(117, 216, 234);
+}

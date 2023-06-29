@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <form method="post" action="/addEmployee">
+                <table>
+                    <tr id="logo-row">
+                        <td colspan="2"><img src="/images/logo.jpeg">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Full Name:</label></td>
+                        <td><input type="text" name="fname" id="fname" class="text-feild" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>Email:</label></td>
+                        <td><input type="text" name="email" id="email" class="text-feild" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>Password:</label></td>
+                        <td><input type="text" name="password" id="password" class="text-feild" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>Confirm Password:</label></td>
+                        <td><input type="text" name="confirmPassword" id="confirmPassword" class="text-feild" required>
+                        </td>
+                    </tr>
+                    <tr id="sub">
+                        <td colspan="2"><input type="submit" value="register" id="submit"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
