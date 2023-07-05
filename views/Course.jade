@@ -1,0 +1,50 @@
+extends layout
+
+block content
+	nav.navbar.navbar-inverse( role="navigation" )
+		.navbar-header
+			button.navbar-toggle.collapsed( type="button", data-toggle="collapse", data-target="#navbar-inverse", aria-expanded="false", aria-controls="navbar",background-color= '#333')
+				span.sr-only Toggle navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+			a.navbar-brand(href="/student_course",active='true') Home
+			a.navbar-brand(href="/student_login") Sign Out
+	h1
+	p
+		
+		h3.display-4.m-b-2 Available Courses
+		div.container
+			div.content
+				h2-display-4.m-b-2
+
+					table.table.table(border ='2')
+						thead
+							tr(bgcolor='#ef4fa8')
+								th Course Name
+								th Duration
+								th Start Date
+								th Lecturer Name
+								th Delete
+								th Update
+
+						tbody
+							each c in Course
+								tr(bgcolor='#e87fb8')
+									td=c.cname
+									td=c.duration
+									td=c.start
+									td=c.Lecturer
+									td
+										a(href='/student_course/#{c._id}' onClick='return confirm(\'Are you sure you want to delete this course?\');') Delete
+									td
+										button.btn.btn-success(type='submit',onclick='window.location.href =\'/student_course/update/#{c._id}\'') Update
+
+		.main.container
+			.row
+				.col-md-6.col-md-offset-3
+				button.btn.btn-primary(type ='submit',onclick='window.location.href =\'/addcourse\'') Add Course
+
+				.image-block 
+				img.className#IdName(src="/images/course.png" alt="Image Title")
+

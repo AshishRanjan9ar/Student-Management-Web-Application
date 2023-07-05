@@ -1,0 +1,36 @@
+extends layout
+
+block content
+    nav.navbar.navbar-inverse( role="navigation" )
+        .navbar-header
+            button.navbar-toggle.collapsed( type="button", data-toggle="collapse", data-target="#navbar-inverse", aria-expanded="false", aria-controls="navbar",background-color= '#333')
+                span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+            a.navbar-brand(href="/",active='true')(style='color:white;') Home
+            a.navbar-brand(href="/student_login")(style='color:white;') Sign In
+            a.navbar-brand(href="/student_signup")(style='color:white;') Sign Up
+    h1
+    p
+        .main.container
+            .row
+                .col-md-6.col-md-offset-3
+                h3.display-4.m-b-2(style='color:black;')
+                 .image-block
+                    img.className#IdName(src="/images/logins.png" alt="Image Title")
+                form(method = "POST" , action="/student_login",name="signin")
+                    div(style="margin-bottom:50px;").col-sm-6.col-sm-offset-3
+                        div.form-group
+                            label(for='email') Email:
+                            input#email.form-control(type='email', placeholder = 'Email', name ='email',required='true')
+                        div.form-group
+                            label(for='password') Password:
+                            input#password.form-control(type='password', placeholder = 'Password', name ='password',required='true')
+                        div.form-group
+                            label.checkbox.
+                            <input type="checkbox" value="remember-me" /> Remember me
+                        div.form-group
+                            button.btn.btn-primary(type ='submit') Sign In
+
+                    div.footer
