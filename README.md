@@ -15,4 +15,17 @@ Moving on, this node JS project for a Student Management System is primarily con
 4. Enroll Course
 5. Logout
 
-![intro-bg_1](https://github.com/AshishRanjan9ar/Student-Management-Web-Application/assets/56405257/527f28fb-6f5f-4958-9f47-46a0089c9cb8)
+# Screenshots
+
+# Login
+![Image1](https://github.com/AshishRanjan9ar/Student-Management-Web-Application/assets/56405257/889295a3-4e9f-4458-ae6b-86b6cf0cd80d)
+
+# Sign Up
+![Image2](https://github.com/AshishRanjan9ar/Student-Management-Web-Application/assets/56405257/c0c9a8fb-7f5b-49c7-aab1-32de4f46898c)
+
+# Add Courses
+![Image3](https://github.com/AshishRanjan9ar/Student-Management-Web-Application/assets/56405257/52c8691c-1358-43b5-8368-6eb5b90cd328)
+
+# Enroll Course
+![Image4](https://github.com/AshishRanjan9ar/Student-Management-Web-Application/assets/56405257/9eba8e9c-a5c5-4c8f-95f0-c2c03a59defe)
+
