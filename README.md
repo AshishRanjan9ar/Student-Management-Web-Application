@@ -14,3 +14,5 @@ Moving on, this node JS project for a Student Management System is primarily con
 3. Add Course
 4. Enroll Course
 5. Logout
+
+![intro-bg_1](https://github.com/AshishRanjan9ar/Student-Management-Web-Application/assets/56405257/527f28fb-6f5f-4958-9f47-46a0089c9cb8)
