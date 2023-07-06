@@ -20,10 +20,8 @@ git clone <repo url> <project_name>
 ```
 npm install
 ```
-
 - Open "config/mongoose.js" and add MongoDB URI, local or Atlas
 ```
-
 nodemon app.js
 ```
 
