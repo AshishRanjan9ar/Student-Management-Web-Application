@@ -2,6 +2,33 @@
 In this Student Management System Project in Node JS and MongoDB Framework, a clean and easy dashboard is displayed with multiple color choices for a better user experience. A free open-source CSS framework for its UI components; Bootstrap is also on board with some Vanilla CSS. Presenting a new Student Management System Node JS MongoDB Project that includes a student, mentor, and university panel with all of the necessary features for follow-up, as well as a competent resource for learning.
 
 
+## Requirements
+
+- Install [Node.js](https://nodejs.org/en/)
+- Install [MongoDB](https://docs.mongodb.com/manual/installation/)
+- Install [Postman](https://www.postman.com/downloads/) or use any other api testing tool
+
+## Getting Started
+
+- Clone the repository
+```
+git clone <repo url> <project_name>
+```
+
+- Install dependencies
+```
+npm install
+```
+
+- Open "config/mongoose.js" and add MongoDB URI, local or Atlas
+
+- Build and run the project
+```
+npm start
+```
+
+- Navigate to `http://localhost:8000/`
+
 # Introduction
 A small project that uses the Node JS Language Web Framework and is based on a Student Management System Project in Node JS with MongoDB. The following Node JS project has all of the necessary capabilities for first- and second-year IT students to employ in their college projects. It contains several features that allow users to maintain the records of their students and mentors. This system, as well as the web application, has a clear concept that is similar to real-life scenarios and is well-implemented.
 
