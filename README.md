@@ -14,6 +14,7 @@ In this Student Management System Project in Node JS and MongoDB Framework, a cl
 ```
 git clone <repo url> <project_name>
 ```
+## Open Terminal and follow these steps.
 
 - Install dependencies
 ```
@@ -21,6 +22,10 @@ npm install
 ```
 
 - Open "config/mongoose.js" and add MongoDB URI, local or Atlas
+```
+
+nodemon app.js
+```
 
 - Build and run the project
 ```
